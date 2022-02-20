@@ -1,0 +1,79 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+['Wooden_spoon_01.jpg', 'Horse_01.jpg', 'Dog_02.jpg', 'Dog_01.jpg']
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:            Wooden_spoon_01.jpg  label:                          w
+ 2 key:                   Horse_01.jpg  label:                          h
+ 3 key:                     Dog_02.jpg  label:                          d
+ 4 key:                     Dog_01.jpg  label:                          d
+
+     MATCH:
+
+           Wooden_spoon_01.jpg: 
+Real:               wooden spoon   Classifier:                   wooden spoon
+
+ NOT A MATCH:
+
+                  Horse_01.jpg: 
+Real:                      horse   Classifier:                        redbone
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: grey fox, gray fox, urocyon cinereoargenteus
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: grey fox, gray fox, urocyon cinereoargenteus
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+           Wooden_spoon_01.jpg: 
+Real:               wooden spoon   Classifier:                   wooden spoon  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                  Horse_01.jpg: 
+Real:                      horse   Classifier:                        redbone  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: grey fox, gray fox, urocyon cinereoargenteus  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: grey fox, gray fox, urocyon cinereoargenteus  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:   0.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+pct_match           : 25.0
+pct_correct_dogs    : 50.0
+pct_correct_breed   : 0.0
+pct_correct_notdogs : 50.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Pet Label           : redbone Classifier Label    : 0
+Pet Label           : grey fox, gray fox, urocyon cinereoargenteus Classifier Label    : 0
+Pet Label           : grey fox, gray fox, urocyon cinereoargenteus Classifier Label    : 0
+
+INCORRECT Dog Breed Assignment:
+
+** Total Elapsed Runtime: 0:0:0
